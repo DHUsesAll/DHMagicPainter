@@ -82,8 +82,11 @@ static NSString * const kDHVectorCoordinateSystemKey = @"kDHVectorCoordinateSyst
 {
     // 通过向量点积的几何意义反解向量夹角
     CGFloat cos = [self dotProductedByOtherVector:oVector] / ([self length] * [oVector length]);
-    if (fabs(cos) > 1) {
+    if (cos > 1) {
         cos = 1;
+    }
+    if (cos < -1) {
+        cos = -1;
     }
     return acos(cos);
 }

@@ -1,4 +1,4 @@
-//
+ //
 //  DHMagicPaintView.m
 //  MagicPainter
 //
